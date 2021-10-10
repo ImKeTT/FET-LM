@@ -1,0 +1,34 @@
+{
+    "data":"imdb",
+    "splist": "./data/stopwords.txt", // location of the stopwords file
+    "max_vocab":40000, // maximum vocabulary size for the input
+    "max_length":80, // maximum sequence size for the input
+    "embed_size":200, // size of the word embedding
+    "hidden_size":300, // number of hidden units for z_s
+    "hidden_size_t":200, // number of hidden units for z_t
+    "code_size":32, // latent code dimension
+    "num_topics":50, // topic number, choose from 10 / 30 / 50
+    "min_freq":2, // min frequency for corpus
+    "epochs":80, // training epoch
+    "batch_size":32, // batch size
+    "dropout":0.3, // dropout rate for all RNN
+    "alpha":1.0, // weight of the mutual information term
+    "beta":3.0, // weight of the topic component
+    "gamma":0.3, // weight of the discriminator
+    "sigma":5e5, // weight of the info penalty mmd(latent, latent_prior)
+    "srec_w":0.0, // weight of srec loss of z_t with Gaussian distribution
+    "rec_w":0.0, // weight of rec loss of z_t with Gaussian distribution
+    "lr":1e-4, // learning rate
+    "wd":1e-5, // weight decay used for regularization
+    "tc_weight":0.0, // total correlation weight
+    "clip":5.0, // max clip norm of gradient clip
+    "flow_type":"hhf", // flow type for sequential posterior modeling
+    "t_type":"dirichlet", // type of z_t, choose from "dirichlet" / "normal"
+    "mmd_type":"t", // type on which info penalty is put, choose from "t" / "z" / "all"
+    "flow_num_layer":10, // number of flow layer
+    "epoch_size":2000, // number of training steps in an epoch
+    "seed":42, //random seed
+    "kla":"cyc", // use kl annealing "cyc" or "mono"
+    "ckpt":"" // name of loaded check point
+
+}
