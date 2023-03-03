@@ -1,11 +1,5 @@
 #!/usr/bin/env python
 #-*- coding: utf-8 -*-
-"""
-@file: flow_module.py
-@author: ImKe at 2021/4/20
-@email: thq415_ic@yeah.net
-@feature: #Enter features here
-"""
 import numpy as np
 import torch
 import torch.nn as nn

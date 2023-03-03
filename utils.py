@@ -1,11 +1,5 @@
 #!/usr/bin/env python
 #-*- coding: utf-8 -*-
-"""
-@file: utils.py
-@author: ImKe at 2021/4/2
-@feature: #Enter features here
-@scenario: #Enter scenarios here
-"""
 
 import torch
 import copy

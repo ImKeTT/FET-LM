@@ -1,11 +1,5 @@
 #!/usr/bin/env python
 #-*- coding: utf-8 -*-
-"""
-@file: train.py
-@author: ImKe at 2021/3/21
-@feature: #Enter features here
-@scenario: #Enter scenarios here
-"""
 import argparse
 import time
 import random

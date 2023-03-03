@@ -1,11 +1,5 @@
 #!/usr/bin/env python
 #-*- coding: utf-8 -*-
-"""
-@file: loss.py
-@author: ImKe at 2021/3/21
-@feature: #Enter features here
-@scenario: #Enter scenarios here
-"""
 import torch
 import torch.nn.functional as F
 from torch.distributions import MultivariateNormal
@@ -87,8 +81,8 @@ def hhf_kld(z_start, z_end):
     # gaussian distribution for simplicity.
     mean = torch.zeros_like(z_start)
     var = torch.ones_like(z_start)
-    # 1. assume q(z_s) ~ N(0, I)
-    # 2. or assume p(z_s) with full covariance matrix
+    # posterior of z_s is a Gaussian with full covariance we assume
+    # 1. assume p(z_s) with full covariance matrix because p(z_s) follows ''standard Gaussian'' not diagnol
     log_p = -0.5 * torch.sum(torch.log(var) + torch.pow(z_start - mean, 2) / var, 1)
     # KL divergence
     # REVISIT: KL divergence should be the expectation of (log_q - log_p) w.r.t. q(z)

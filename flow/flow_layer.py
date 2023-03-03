@@ -1,11 +1,5 @@
 #!/usr/bin/env python
 #-*- coding: utf-8 -*-
-"""
-@file: flow_layer.py
-@author: ImKe at 2021/3/24
-@feature: #Enter features here
-"""
-
 import time
 import random
 import math

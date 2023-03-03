@@ -44,7 +44,7 @@ class Corpus(object):
             path=datadir, train='train.txt', validation='valid.txt',
             test='test.txt', format='tsv', fields=datafields
         )
-        cache = '/home/thq/.vector_cache'
+        cache = '/home/user/.vector_cache'
         vectors = Vectors(name='glove.6B.300d.txt', cache=cache)
         TEXT.build_vocab(
             self.train, self.valid, max_size=max_vocab_size,

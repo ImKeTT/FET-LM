@@ -1,11 +1,5 @@
 #!/usr/bin/env python
 #-*- coding: utf-8 -*-
-"""
-@file: topic_model.py
-@author: ImKe at 2021/3/21
-@feature: #Enter features here
-@scenario: #Enter scenarios here
-"""
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -530,7 +524,7 @@ class TopGenVAE(nn.Module):
             # take mean on second dimension(max_len)
             x_bar = torch.mean(torch.matmul(u.unsqueeze(2), W_v).squeeze(2), dim=1) # [batch_size, embedding_size]
         # print("x_bar size", x_bar.size())
-        ############## Word Embedding Size == Hidden Size zt ##############
+        ############## Bow Embedding Size == Hidden Size zt ##############
         posterior_t, _ = self.h2t(x_bar)
         t_discri = posterior_t.rsample().to(device)
         return self.decode_bow(t_discri)

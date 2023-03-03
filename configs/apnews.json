@@ -29,6 +29,6 @@
     "epoch_size":2000, // number of training steps in an epoch
     "seed":42, //random seed
     "kla":"cyc", // use kl annealing "cyc" or "mono"
-    "ckpt":"" // name of loaded check point
+    "ckpt":""// name of loaded check point
 
 }
