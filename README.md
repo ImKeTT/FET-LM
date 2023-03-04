@@ -1,6 +1,6 @@
 # FET-LM: Flow Enhanced Variational Auto-Encoder for Topic-Guided Language Modeling
 
-Official PyTorch Implementation of  *[FET-LM]()*, accepted to *[IEEE Transactions on Neural Networks and Learning Systems (TNNLS)](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=5962385)*. We provide the training code of FET-LM over 5 datasets (APNEWS, BNC, IMDB, PTB and Yelp15) on language modeling.
+Official PyTorch Implementation of  *[FET-LM]()*, accepted to *[IEEE Transactions on Neural Networks and Learning Systems (TNNLS)](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=5962385)*. We provide (1) the code of FET-LM over 5 datasets (APNEWS, BNC, IMDB, PTB and Yelp15) on language modeling and (2) the full paper [here](https://github.com/ImKeTT/FET-LM/paper/fet-lm.pdf) (including full Appendix).
 
 ## Setup
 
@@ -11,6 +11,7 @@ Make sure you have installed the following packages:
 ```bash
 torch
 torchtext
+nltk
 ```
 
 ### Word Vector
@@ -34,7 +35,7 @@ For training, PPL and topic entropy results will show in this process.
 python train.py --data apnews --min_freq 2 --epochs 80 --sigma 5e2 --gamma 0.3 --flow_num_layer 10 --kla cyc --num_topics 50
 ```
 
-Detailed training description of each dataset please refer to `./config/{dataset name}.json` , add the commands to bash line accordingly.
+Detailed training description of each dataset please refer to `./config/{dataset name}.json` , add the commands to bash line accordingly. Will incorporate these config files into training code soon~
 
 ```json
 // e.g., for dataset APNEWS
@@ -76,7 +77,7 @@ Detailed training description of each dataset please refer to `./config/{dataset
 
 ## Testing
 
-
+TBD.
 
 ## Others
 
@@ -85,7 +86,7 @@ Please email me or open an issue if you have any question.
 if you find our work useful, please star the repo and cite the paper :)
 
 ```
-TBD.
+TBD
 ```
 
 We thank open sourced codes related to VAEs and flow-based methods, which inspired our work !!
